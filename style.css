@@ -1,8 +1,68 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+:root {
+  /*COLORS*/
+  --color-primary: #d9a384;
+  --color-header-text: #d9a384;
+  --color-main-text: #bfae99;
+  --color-text-secondary: #222601;
+  --color-text-tertiary: #6f7302;
+  --color-background-header: white;
+  --color-background-main: #6f7302;
+  --color-background-footer: #6f7302;
+  --color-background-card: white;
+}
+
+body {
+  font-family: var(--font-family-text);
+  margin: 0;
+  background-color: var(--color-background-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-text);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+.header {
+  background-color: var(--color-background-header);
+  color: var(--color-header-text);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.main {
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--color-background-footer);
+  color: var(--color-main-text);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* Color Theme Swatches in Hex 
+.Pool-Time-1-hex { color: #324001; }
+.Pool-Time-2-hex { color: #222601; }
+.Pool-Time-3-hex { color: #6F7302; }
+.Pool-Time-4-hex { color: #BFAE99; }
+.Pool-Time-5-hex { color: #D9A384; }
+*/
