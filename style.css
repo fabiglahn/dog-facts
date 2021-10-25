@@ -13,10 +13,14 @@
   --color-main-text: #bfae99;
   --color-text-secondary: #222601;
   --color-text-tertiary: #6f7302;
+  --color-text-button: white;
   --color-background-header: white;
-  --color-background-main: #6f7302;
-  --color-background-footer: #6f7302;
+  --color-background-main: #bfae99;
+  --color-background-footer: #bfae99;
   --color-background-card: white;
+
+  /* FONTS */
+  --font-family-text: "Open Sans", sans-serif;
 }
 
 body {
@@ -50,6 +54,10 @@ h1 {
   color: var(--color-main-text);
   padding: 2rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
+  position: relative;
+  row-gap: 1rem;
 }
 
 .footer {
@@ -59,10 +67,31 @@ h1 {
   padding: 4rem 2rem;
 }
 
-/* Color Theme Swatches in Hex 
-.Pool-Time-1-hex { color: #324001; }
-.Pool-Time-2-hex { color: #222601; }
-.Pool-Time-3-hex { color: #6F7302; }
-.Pool-Time-4-hex { color: #BFAE99; }
-.Pool-Time-5-hex { color: #D9A384; }
-*/
+button {
+  background-color: var(--background-main);
+  color: var(--color-text-button);
+  border-color: var(--color-text-button);
+  border-style: solid;
+  display: grid;
+  justify-content: center;
+  width: 10rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+/* Color Theme Swatches in Hex .Pool-Time-1-hex {
+  color: #324001;
+}
+.Pool-Time-2-hex {
+  color: #222601;
+}
+.Pool-Time-3-hex {
+  color: #6f7302;
+}
+.Pool-Time-4-hex {
+  color: #bfae99;
+}
+.Pool-Time-5-hex {
+  color: #d9a384;
+}
+ */

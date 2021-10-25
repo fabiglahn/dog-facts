@@ -13,24 +13,25 @@ async function renderApp() {
     }),
   ]);
 
-  const button = createNextButton(handleSubmit);
+  const fact = await fetchFact();
 
-  async function handleSubmit() {
-    const response = await fetch(
-      `https://cors.machens.koeln/https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1`
-    );
-    const body = await response.json();
-    const xyz = body[0].fact;
+  const factCard = createFactCard(fact);
+
+  const button = createNextButton(onClick);
+
+  async function onClick() {
+    const newFact = await fetchFact();
+    factCard.textContent = newFact;
   }
-  const facts = await fetchFact();
 
-  const factCards = createFactCard(facts);
+  const mainElement = createElement("main", { className: "main" }, [
+    factCard,
+    button,
+  ]);
 
-  /* const factCards = facts.map((fact) => createFactCard(fact)); */
-
-  const mainElement = createElement("main", { className: "main" }, [factCards]);
-
-  appElement.append(headerElement, mainElement, button);
+  appElement.append(headerElement, mainElement);
 }
 
 renderApp();
+
+/* const factCards = facts.map((fact) => createFactCard(fact)); */

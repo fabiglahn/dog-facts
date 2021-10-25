@@ -1,16 +1,16 @@
 import { createElement } from "../lib/elements.js";
 import "../style.css";
 
-export function createNextButton(onSubmit) {
+export function createNextButton(onClick) {
   const buttonElement = createElement(
     "form",
     {
-      onsubmit: function (event) {
+      onclick: function (event) {
         event.preventDefault();
-        onSubmit();
+        onClick();
       },
     },
-    [createElement("input", { type: "submit", value: "Next" })]
+    [createElement("button", { type: "onclick", textContent: "Next" })]
   );
 
   return buttonElement;
