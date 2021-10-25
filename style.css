@@ -67,18 +67,6 @@ h1 {
   padding: 4rem 2rem;
 }
 
-button {
-  background-color: var(--background-main);
-  color: var(--color-text-button);
-  border-color: var(--color-text-button);
-  border-style: solid;
-  display: grid;
-  justify-content: center;
-  width: 10rem;
-  cursor: pointer;
-  border-radius: 0.3rem;
-}
-
 /* Color Theme Swatches in Hex .Pool-Time-1-hex {
   color: #324001;
 }
