@@ -14,11 +14,9 @@ async function renderApp() {
   ]);
 
   const fact = await fetchFact();
-
   const factCard = createFactCard(fact);
 
   const button = createNextButton(onClick);
-
   async function onClick() {
     const newFact = await fetchFact();
     factCard.textContent = newFact;

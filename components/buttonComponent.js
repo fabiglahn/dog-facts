@@ -1,5 +1,5 @@
 import { createElement } from "../lib/elements.js";
-import "../style.css";
+import styles from "./buttonComponent.module.css";
 
 export function createNextButton(onClick) {
   const buttonElement = createElement(
